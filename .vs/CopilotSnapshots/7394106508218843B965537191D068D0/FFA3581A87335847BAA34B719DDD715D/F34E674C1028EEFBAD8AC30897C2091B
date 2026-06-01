@@ -1,0 +1,92 @@
+﻿@model Web1_abr13.Models.cliente
+
+@{
+    ViewBag.Title = "EditCliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditCliente</h2>
+
+
+@using (Html.BeginForm("EditCliente", "Clientes", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>cliente</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.num)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nome, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.categoria, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+               @Html.DropDownListFor(m=>m.categoria,ViewBag.categorias as SelectList,new {@class ="form-select"})
+                @Html.ValidationMessageFor(model => model.categoria, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.datanasc, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.datanasc,"{0:yyyy-MM-dd}", new {@class="form-control", @type="date"} )
+                @Html.ValidationMessageFor(model => model.datanasc, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.tutor, "tutor", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m=>m.tutor,ViewBag.tutores as SelectList,  new { @class = "form-select" })
+                @Html.ValidationMessageFor(model => model.tutor, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.fotopath, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" id="fich" name="fich" class="form-control"/>
+                <img id="foto" alt="" style="max-height:500px"/>
+                @Html.ValidationMessageFor(model => model.fotopath, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "GetClientes")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        window.onload = function () {
+            const fileupload = document.getElementById("fich");
+            fileupload.addEventListener("change", (evt) => {
+                const file = fileupload.files[0];
+                if (file != null) {
+                    const reader = new FileReader();
+                    reader.onload = function () {
+                        document.getElementById("foto").src = reader.result;
+                    }
+                    reader.readAsDataURL(file);
+                }
+
+            });
+        }
+    </script>
+}

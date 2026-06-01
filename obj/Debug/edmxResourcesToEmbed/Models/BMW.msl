@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BillGatesModelStoreContainer" CdmEntityContainer="BMW1">
+    <EntitySetMapping Name="alugueres">
+      <EntityTypeMapping TypeName="BillGatesModel.aluguere">
+        <MappingFragment StoreEntitySet="alugueres">
+          <ScalarProperty Name="idal" ColumnName="idal" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="idcar" ColumnName="idcar" />
+          <ScalarProperty Name="inicio" ColumnName="inicio" />
+          <ScalarProperty Name="fim" ColumnName="fim" />
+          <ScalarProperty Name="tempo" ColumnName="tempo" />
+          <ScalarProperty Name="custo" ColumnName="custo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="carros">
+      <EntityTypeMapping TypeName="BillGatesModel.carro">
+        <MappingFragment StoreEntitySet="carros">
+          <ScalarProperty Name="idcar" ColumnName="idcar" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="phora" ColumnName="phora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clientes">
+      <EntityTypeMapping TypeName="BillGatesModel.cliente">
+        <MappingFragment StoreEntitySet="clientes">
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="datanasc" ColumnName="datanasc" />
+          <ScalarProperty Name="idade" ColumnName="idade" />
+          <ScalarProperty Name="tutor" ColumnName="tutor" />
+          <ScalarProperty Name="fotopath" ColumnName="fotopath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

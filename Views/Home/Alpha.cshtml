@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Alpha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Random r = new Random();
+    int sorte = r.Next(1, 7);
+    string[] temas = new string[] {"Html", "JavaScript", "C#", "SQL Server", "CSS/Bootstrap"};
+}
+
+<h2>Número da sorte: @sorte | Prémio @(sorte * 100)</h2>
+<img src="~/Images/aspnet.png" alt="" class="foto" />
+
+<hr />
+<h2>Par/Ímpar</h2>
+@if (sorte % 2 == 0)
+{
+    <p class="text-danger">Par</p>
+}
+else
+{
+    <p class="text-success">Ímpar</p>
+}
+
+<hr />
+<h2>Switch</h2>
+@switch (sorte)
+{
+    case 1:
+        <p>Primeiro</p>
+        break;
+    case 2:
+        <p>Segundo</p>
+        break;
+    case 3:
+        <p>Terceiro</p>
+        break;
+    default:
+        <p>Últimos</p>
+        break;
+}
+
+<hr />
+<h2>For</h2>
+<ul>
+    @for (int i = 1; i < sorte; i++)
+    {
+        <li>item @i</li>
+    }
+</ul>
+
+<hr />
+<h2>Foreach</h2>
+<ol>
+    @foreach (var it in temas)
+    {
+        <li>@it</li>
+    }
+</ol>

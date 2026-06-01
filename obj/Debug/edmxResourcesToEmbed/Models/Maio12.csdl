@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BillGatesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="alugueres">
+    <Key>
+      <PropertyRef Name="idal" />
+    </Key>
+    <Property Name="idal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="num" Type="Int32" />
+    <Property Name="idcar" Type="Int32" />
+    <Property Name="inicio" Type="DateTime" Precision="3" />
+    <Property Name="fim" Type="DateTime" Precision="3" />
+    <Property Name="tempo" Type="Double" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="custo" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="carros" Relationship="Self.FK__alugueres__idcar__534D60F1" FromRole="alugueres" ToRole="carros" />
+    <NavigationProperty Name="clientes" Relationship="Self.FK__alugueres__num__52593CB8" FromRole="alugueres" ToRole="clientes" />
+  </EntityType>
+  <EntityType Name="carros">
+    <Key>
+      <PropertyRef Name="idcar" />
+    </Key>
+    <Property Name="idcar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phora" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="alugueres" Relationship="Self.FK__alugueres__idcar__534D60F1" FromRole="carros" ToRole="alugueres" />
+  </EntityType>
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="num" />
+    </Key>
+    <Property Name="num" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="categoria" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datanasc" Type="DateTime" Precision="0" />
+    <Property Name="idade" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="tutor" Type="Int32" />
+    <NavigationProperty Name="alugueres" Relationship="Self.FK__alugueres__num__52593CB8" FromRole="clientes" ToRole="alugueres" />
+    <NavigationProperty Name="clientes1" Relationship="Self.fk_clientes_clientes" FromRole="clientes" ToRole="clientes1" />
+    <NavigationProperty Name="clientes2" Relationship="Self.fk_clientes_clientes" FromRole="clientes1" ToRole="clientes" />
+  </EntityType>
+  <Association Name="FK__alugueres__idcar__534D60F1">
+    <End Role="carros" Type="Self.carros" Multiplicity="0..1" />
+    <End Role="alugueres" Type="Self.alugueres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="carros">
+        <PropertyRef Name="idcar" />
+      </Principal>
+      <Dependent Role="alugueres">
+        <PropertyRef Name="idcar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__alugueres__num__52593CB8">
+    <End Role="clientes" Type="Self.clientes" Multiplicity="0..1" />
+    <End Role="alugueres" Type="Self.alugueres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="num" />
+      </Principal>
+      <Dependent Role="alugueres">
+        <PropertyRef Name="num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_clientes_clientes">
+    <End Role="clientes" Type="Self.clientes" Multiplicity="0..1" />
+    <End Role="clientes1" Type="Self.clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="num" />
+      </Principal>
+      <Dependent Role="clientes1">
+        <PropertyRef Name="tutor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BillGatesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="alugueres" EntityType="Self.alugueres" />
+    <EntitySet Name="carros" EntityType="Self.carros" />
+    <EntitySet Name="clientes" EntityType="Self.clientes" />
+    <AssociationSet Name="FK__alugueres__idcar__534D60F1" Association="Self.FK__alugueres__idcar__534D60F1">
+      <End Role="carros" EntitySet="carros" />
+      <End Role="alugueres" EntitySet="alugueres" />
+    </AssociationSet>
+    <AssociationSet Name="FK__alugueres__num__52593CB8" Association="Self.FK__alugueres__num__52593CB8">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="alugueres" EntitySet="alugueres" />
+    </AssociationSet>
+    <AssociationSet Name="fk_clientes_clientes" Association="Self.fk_clientes_clientes">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="clientes1" EntitySet="clientes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

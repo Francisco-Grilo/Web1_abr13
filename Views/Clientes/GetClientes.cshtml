@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Web1_abr13.Models.cliente>
+
+@{
+    ViewBag.Title = "GetClientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetClientes</h2>
+<h3 class="text-danger">@ViewBag.message</h3>
+
+<p>
+    @Html.ActionLink("Create New", "CreateCliente")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datanasc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idade)
+        </th>
+        <th>
+            Foto
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cliente1.tutor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.categoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.datanasc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idade)
+        </td>
+        <td>
+            @if (string.IsNullOrEmpty(item.fotopath))
+            {
+                <img src="@Url.Content("~/fotos/nophoto.png")" alt="" style="height:45px" />
+            }
+            else
+            {
+                <img src="@Url.Content("~/fotos/" + item.fotopath + "?t=" + DateTime.Now.Ticks)" alt="" style="height:45px" />
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cliente1.nome)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditCliente", new { id=item.num }) |
+            @Html.ActionLink("Details", "Details", new { id=item.num }) |
+            @Html.ActionLink("Delete", null, null, new { id=item.num, name="btdel" })
+        </td>
+    </tr>
+}
+
+</table>
+
+@section scripts{
+    <script>
+        window.onload = function () {
+            const btdels = document.querySelectorAll('[name="btdel"]');
+            btdels.forEach((elemento) => {
+                elemento.addEventListener("click", (evt) => {
+                    let ok = confirm("Quer mesmo apagar?");
+                    if (!ok) return false;
+                    let dados = new URLSearchParams();
+                    dados.append("id", evt.target.id);
+                    fetch("@Url.Action("DeleteCliente")", {
+                        method: "POST",
+                        body: dados
+                    }).then(response => response.json()).then(dados => {
+                        if (dados.msg == "ok") evt.target.closest("tr").remove();
+                        else alert("Não Removeu");
+                    }).catch(erro => console.log(erro));
+                });
+            })
+        };
+    </script>    
+}

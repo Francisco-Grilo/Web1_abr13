@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|c:\\users\\je\\onedrive - merc\u00FArio tic , lda\\pessoal\\istec\\ti iii\\web1\\web1_abr13\\views\\clientes\\editcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:views\\clientes\\editcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\views\\clientes\\getclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:views\\clientes\\getclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\views\\clientes\\createcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:views\\clientes\\createcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|c:\\users\\je\\onedrive - merc\u00FArio tic , lda\\pessoal\\istec\\ti iii\\web1\\web1_abr13\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|c:\\users\\je\\onedrive - merc\u00FArio tic , lda\\pessoal\\istec\\ti iii\\web1\\web1_abr13\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|c:\\users\\je\\onedrive - merc\u00FArio tic , lda\\pessoal\\istec\\ti iii\\web1\\web1_abr13\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|c:\\users\\je\\onedrive - merc\u00FArio tic , lda\\pessoal\\istec\\ti iii\\web1\\web1_abr13\\views\\stand\\editcarro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:views\\stand\\editcarro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|c:\\users\\je\\onedrive - merc\u00FArio tic , lda\\pessoal\\istec\\ti iii\\web1\\web1_abr13\\views\\stand\\getcarros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:views\\stand\\getcarros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\controllers\\standcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:controllers\\standcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T23:36:40.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditCliente.cshtml",
+              "DocumentMoniker": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Views\\Clientes\\EditCliente.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\EditCliente.cshtml",
+              "ToolTip": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Views\\Clientes\\EditCliente.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\EditCliente.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwDgAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-30T23:04:13.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetClientes.cshtml",
+              "DocumentMoniker": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Views\\Clientes\\GetClientes.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\GetClientes.cshtml",
+              "ToolTip": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Views\\Clientes\\GetClientes.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\GetClientes.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAlwDMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-21T10:24:30.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateCliente.cshtml",
+              "DocumentMoniker": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Views\\Clientes\\CreateCliente.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\CreateCliente.cshtml",
+              "ToolTip": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Views\\Clientes\\CreateCliente.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\CreateCliente.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADYAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-21T10:24:17.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "Controllers\\ClientesController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAowC4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T10:23:35.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAlwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-05-30T23:31:11.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EditCarro.cshtml",
+              "DocumentMoniker": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Views\\Stand\\EditCarro.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stand\\EditCarro.cshtml",
+              "ToolTip": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Views\\Stand\\EditCarro.cshtml",
+              "RelativeToolTip": "Views\\Stand\\EditCarro.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-30T23:00:47.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetCarros.cshtml",
+              "DocumentMoniker": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Views\\Stand\\GetCarros.cshtml",
+              "RelativeDocumentMoniker": "Views\\Stand\\GetCarros.cshtml",
+              "ToolTip": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Views\\Stand\\GetCarros.cshtml",
+              "RelativeToolTip": "Views\\Stand\\GetCarros.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-30T23:00:23.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StandController.cs",
+              "DocumentMoniker": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Controllers\\StandController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StandController.cs",
+              "ToolTip": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Controllers\\StandController.cs",
+              "RelativeToolTip": "Controllers\\StandController.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAwwHMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T19:52:37.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "cliente.cs",
+              "DocumentMoniker": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Models\\cliente.cs",
+              "RelativeDocumentMoniker": "Models\\cliente.cs",
+              "ToolTip": "C:\\Users\\JE\\OneDrive - Merc\u00FArio TIC , Lda\\Pessoal\\ISTEC\\TI III\\Web1\\Web1_abr13\\Models\\cliente.cs",
+              "RelativeToolTip": "Models\\cliente.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T20:31:01.01Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

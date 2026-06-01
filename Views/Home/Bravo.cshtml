@@ -1,0 +1,58 @@
+﻿@using Web1_abr13.Models;
+@model Web1_abr13.Models.Aluno
+@{
+    ViewBag.Title = "Bravo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bravo</h2>
+<h4>Escola: @ViewBag.escola</h4>
+<h5>Disciplina @ViewData["disciplina"]</h5>
+<h5>Professor @TempData["professor"]</h5>
+
+<hr />
+
+<h3>Aluno</h3>
+<p>Num: @Model.Num</p>
+<p>Nome: @Model.Nome</p>
+<p><span class="text-danger">Turma: </span>@Model.Turma</p>
+
+@* TPC - Cálculo do IMC *@
+
+<hr />
+
+<form action="@Url.Action("Bravo", "Home")"
+      method="post"
+      class="form-group"
+      enctype="application/x-www-form-urlencoded"
+      id="frm">
+    <label for="num">Número: </label>
+    <input type="number" name="numero" id="numero" value="@ViewBag.numero" class="form-control" />
+    <button type="submit" class="btn btn-success">Click</button>
+    <button type="button" class="btn btn-danger" id="btdobro">Click JavaScript</button>
+    <div id="tv">
+        @ViewBag.result
+    </div>
+</form>
+
+@section BravoSection{
+    <style>
+        body{
+            background-color: orange;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            const numero = document.getElementById("numero");
+            const btdobro = document.getElementById("btdobro");
+
+            btdobro.addEventListener("click", (evt) => {
+                evt.preventDefault();
+                var rslt = parseInt(numero.value) * 2;
+                document.getElementById("tv").innerHTML = rslt;
+            })
+
+        }
+    </script>
+    }

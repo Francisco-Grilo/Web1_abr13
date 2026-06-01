@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Web1_abr13.Models.carro>
+
+@{
+    ViewBag.Title = "GetCarros";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetCarros</h2>
+<h3 class="text-danger">@ViewBag.message</h3>
+<p>
+    @Html.ActionLink("Create New", "CreateCarro")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phora)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phora)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditCarro", new { id=item.idcar }) |
+                @Html.ActionLink("Details", "Details", new { id = item.idcar }) |
+                @Html.ActionLink("Delete", "DeleteCarro", new { id = item.idcar })
+            </td>
+        </tr>
+    }
+
+</table>

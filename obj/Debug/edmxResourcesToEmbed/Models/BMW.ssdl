@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BillGatesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="alugueres">
+    <Key>
+      <PropertyRef Name="idal" />
+    </Key>
+    <Property Name="idal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="num" Type="int" />
+    <Property Name="idcar" Type="int" />
+    <Property Name="inicio" Type="datetime" />
+    <Property Name="fim" Type="datetime" />
+    <Property Name="tempo" Type="float" StoreGeneratedPattern="Computed" />
+    <Property Name="custo" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="carros">
+    <Key>
+      <PropertyRef Name="idcar" />
+    </Key>
+    <Property Name="idcar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="modelo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="phora" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="num" />
+    </Key>
+    <Property Name="num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="categoria" Type="nvarchar" MaxLength="50" />
+    <Property Name="datanasc" Type="date" />
+    <Property Name="idade" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="tutor" Type="int" />
+    <Property Name="fotopath" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <Association Name="FK__alugueres__idcar__534D60F1">
+    <End Role="carros" Type="Self.carros" Multiplicity="0..1" />
+    <End Role="alugueres" Type="Self.alugueres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="carros">
+        <PropertyRef Name="idcar" />
+      </Principal>
+      <Dependent Role="alugueres">
+        <PropertyRef Name="idcar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__alugueres__num__52593CB8">
+    <End Role="clientes" Type="Self.clientes" Multiplicity="0..1" />
+    <End Role="alugueres" Type="Self.alugueres" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="num" />
+      </Principal>
+      <Dependent Role="alugueres">
+        <PropertyRef Name="num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_clientes_clientes">
+    <End Role="clientes" Type="Self.clientes" Multiplicity="0..1" />
+    <End Role="clientes1" Type="Self.clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="num" />
+      </Principal>
+      <Dependent Role="clientes1">
+        <PropertyRef Name="tutor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BillGatesModelStoreContainer">
+    <EntitySet Name="alugueres" EntityType="Self.alugueres" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="carros" EntityType="Self.carros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clientes" EntityType="Self.clientes" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__alugueres__idcar__534D60F1" Association="Self.FK__alugueres__idcar__534D60F1">
+      <End Role="carros" EntitySet="carros" />
+      <End Role="alugueres" EntitySet="alugueres" />
+    </AssociationSet>
+    <AssociationSet Name="FK__alugueres__num__52593CB8" Association="Self.FK__alugueres__num__52593CB8">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="alugueres" EntitySet="alugueres" />
+    </AssociationSet>
+    <AssociationSet Name="fk_clientes_clientes" Association="Self.fk_clientes_clientes">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="clientes1" EntitySet="clientes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,161 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Services.Description;
+using Web1_abr13.Models;
+
+namespace Web1_abr13.Controllers
+{
+    public class StandController : Controller
+    {
+        public ActionResult DeleteCarro(int? id)
+        {
+            using (BMW1 bd = new BMW1())
+            {
+                carro este = bd.carros.Find(id ?? 0);
+                if (este != null)
+                {
+                    return View(este);
+                }
+                else return RedirectToAction("GetCarros", "Stand", new { message = "Carro não existe" });
+            }
+        }
+
+        [HttpPost]
+        [ActionName("DeleteCarro")]
+        public ActionResult DeleteCoche(int? id)
+        {
+            using (BMW1 bd = new BMW1())
+            {
+                try
+                {
+                    carro este = bd.carros.Find(id ?? 0);
+                    if (este != null)
+                    {
+                        bd.carros.Remove(este);
+                        bd.SaveChanges();
+                        return RedirectToAction("GetCarros", "Stand", new { message = "Eliminado com sucesso" });
+                    }
+                    else return RedirectToAction("GetCarros", "Stand", new { message = "Carro não existe" });
+                }
+                catch (Exception erro)
+                {
+                    return RedirectToAction("GetCarros", "Stand", new { message = erro.Message });
+                }
+            }
+        }
+
+        public ActionResult Details(int? id)
+        {
+            using (BMW1 bd = new BMW1())
+            {
+                int idcli = id ?? -1;
+                carro este = bd.carros.Find(idcli);
+                if (este != null) return View(este);
+                return RedirectToAction("GetCarros", "Stand", new { message = "Carro não existe" });
+            }
+
+        }
+
+        [HttpGet]
+        public ActionResult CreateCarro()
+        {
+            carro novo = new carro();
+            return View(novo);
+        }
+
+        [HttpPost]
+        public ActionResult CreateCarro(carro novo)
+        {
+            try
+            {
+                using (BMW1 bd = new BMW1())
+                {
+                    if (ModelState.IsValid)
+                    {
+                        bd.carros.Add(novo);
+                        bd.SaveChanges();
+                        return RedirectToAction("GetCarros", "Stand", new { message = "Sucesso Insert" });
+                    }
+                    else
+                    {
+                        //Fico na página create até validar os dados
+                        return View(novo);
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+
+                return RedirectToAction("GetCarros", "Stand", new { message = erro.Message });
+            }
+        }
+
+        [HttpGet]
+        public ActionResult EditCarro(int? id)
+        {
+            using (BMW1 bd = new BMW1())
+            {
+                int idcli = id ?? -1;
+                carro este = bd.carros.Find(idcli);
+                if (este != null)
+                {
+                    return View(este);
+                }
+                else
+                {
+                    return RedirectToAction("GetCarros", "Stand", new { message = "Carro não existe" });
+                }
+            }
+        }
+
+        [HttpPost]
+        [ActionName("EditCarro")]
+        public ActionResult EditCarro(carro carroEditado)
+        {
+            try
+            {
+                using (BMW1 bd = new BMW1())
+                {
+                    if (ModelState.IsValid)
+                    {
+                        carro carroOriginal = bd.carros.Find(carroEditado.idcar);
+                        if (carroOriginal != null)
+                        {
+                            carroOriginal.modelo = carroEditado.modelo;
+                            carroOriginal.phora = carroEditado.phora;
+                            bd.SaveChanges();
+                            return RedirectToAction("GetCarros", "Stand", new { message = "Carro atualizado com sucesso" });
+                        }
+                        else
+                        {
+                            return RedirectToAction("GetCarros", "Stand", new { message = "Carro não existe" });
+                        }
+                    }
+                    else
+                    {
+                        //Ficar na página edit até validar os dados
+                        return View(carroEditado);
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+                return RedirectToAction("GetCarros", "Stand", new { message = erro.Message });
+            }
+        }
+
+        // GET: Stand
+        public ActionResult GetCarros(string message)
+        {
+            using (BMW1 bd = new BMW1())
+            {
+                ViewBag.message = message;
+                List<carro> carros = bd.carros.ToList();
+                return View(carros);
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+﻿@model Web1_abr13.Models.carro
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>carros</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phora)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditCarro", new { id = Model.idcar }) |
+    @Html.ActionLink("Back to List", "GetCarros")
+</p>

@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Eco";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Formulário: @ViewBag.titulo</h2>
+@using (Html.BeginForm("Eco", "Istec", FormMethod.Post, new { id = "frm", @class = "form-group" }))  // Estrutura de controlo que cria o objeto que vai eliminar depois de usar
+{
+    <label>Número</label>
+    @Html.TextBox("numero", "", new { @class = "form-control" })
+    <hr />
+    <button class="btn btn-success m-2" type="submit">Click Servidor</button>
+    <button class="btn btn-warning m-2" id="btfetch" type="button">Click Fetch</button>
+    <hr />
+    <div id="tv">
+        @ViewBag.resultado
+    </div>
+}
+
+@section scripts{
+    
+    <script>
+        window.onload = function () {
+            const btfetch = document.getElementById("btfetch");
+            btfetch.addEventListener("click", (evt) => {
+                evt.preventDefault();
+
+                const frm = document.getElementById("frm");
+                formdata = new FormData(frm);
+                for (const [k, v] of formdata) console.log(`${k} -> ${v}`);
+
+                var dados = new URLSearchParams();
+                let n = parseInt(document.getElementById("numero").value);
+                dados.append("num", n);
+                fetch("@Url.Action("Dobro","Istec")", {
+                    method: "post",
+                    body: dados
+                }).then(response => response.json()).then(dados => {
+                    console.log(dados);
+                    document.getElementById("tv").innerHTML = `O dobro de ${n} = ${dados.resultado}`
+                }).catch(erro => document.getElementById("tv").innerHTML = JSON.stringify(erro));
+            });
+        }
+    </script>
+
+    }

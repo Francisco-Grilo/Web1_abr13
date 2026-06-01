@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5f609a6c5d3445c6960f9bb325823d11" Name="Diagram1">
+        <EntityTypeShape EntityType="BillGatesModel.aluguere" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BillGatesModel.carro" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BillGatesModel.cliente" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="BillGatesModel.FK__alugueres__idcar__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="BillGatesModel.FK__alugueres__num__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="BillGatesModel.fk_clientes_clientes" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,109 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Services.Description;
+using Web1_abr13.Models;
+
+namespace Web1_abr13.Controllers
+{
+    public class StandController : Controller
+    {
+        public ActionResult DeleteCarro(int? id)
+        {
+            using (BillGatesEntities bd = new BillGatesEntities())
+            {
+                carros este = bd.carros.Find(id ?? 0);
+                if (este != null)
+                {
+                    return View(este);
+                }
+                else return RedirectToAction("GetCarros", "Stand", new { message = "Carro não existe" });
+            }
+        }
+
+        [HttpPost]
+        [ActionName("DeleteCarro")]
+        public ActionResult DeleteCoche(int? id)
+        {
+            using (BillGatesEntities bd = new BillGatesEntities())
+            {
+                try
+                {
+                    carros este = bd.carros.Find(id ?? 0);
+                    if (este != null)
+                    {
+                        bd.carros.Remove(este);
+                        bd.SaveChanges();
+                        return RedirectToAction("GetCarros", "Stand", new { message = "Eliminado com sucesso" });
+                    }
+                    else return RedirectToAction("GetCarros", "Stand", new { message = "Carro não existe" });
+                }
+                catch (Exception erro)
+                {
+                    return RedirectToAction("GetCarros", "Stand", new { message = erro.Message });
+                }
+            }
+        }
+
+        public ActionResult Details(int? id)
+        {
+            using (BillGatesEntities bd = new BillGatesEntities())
+            {
+                int idcli = id ?? -1;
+                carros este = bd.carros.Find(idcli);
+                if (este != null) return View(este);
+                return RedirectToAction("GetCarros", "Stand", new { message = "Carro não existe" });
+            }
+
+        }
+
+        [HttpGet]
+        public ActionResult CreateCarro()
+        {
+            carros novo = new carros();
+            return View(novo);
+        }
+
+        [HttpPost]
+        public ActionResult CreateCarro(carros novo)
+        {
+            try
+            {
+                using (BillGatesEntities bd = new BillGatesEntities())
+                {
+                    if (ModelState.IsValid)
+                    {
+                        bd.carros.Add(novo);
+                        bd.SaveChanges();
+                        return RedirectToAction("GetCarros", "Stand", new { message = "Sucesso Insert" });
+                    }
+                    else
+                    {
+                        //Fico na página create até validar os dados
+                        return View(novo);
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+
+                return RedirectToAction("GetCarros", "Stand", new { message = erro.Message });
+            }
+        }
+
+
+
+        // GET: Stand
+        public ActionResult GetCarros(string message)
+        {
+            using (BillGatesEntities bd = new BillGatesEntities())
+            {
+                ViewBag.message = message;
+                List<carros> carros = bd.carros.ToList();
+                return View(carros);
+            }
+        }
+    }
+}
