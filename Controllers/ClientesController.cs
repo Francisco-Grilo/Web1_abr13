@@ -44,7 +44,6 @@ namespace Web1_abr13.Controllers
                 {
                     try
                     {
-                        // Atualizar foto se um novo ficheiro for enviado
                         if (fich != null && fich.ContentLength > 0 && fich.ContentType.Contains("image"))
                         {
                             string fichnome = clienteEditado.num.ToString() + System.IO.Path.GetExtension(fich.FileName);
@@ -64,7 +63,6 @@ namespace Web1_abr13.Controllers
                 }
             }
 
-            // Se o modelo não for válido ou ocorrer um erro, vai recarregar os dados necessários para a View
             using (BMW1 bd = new BMW1())
             {
                 List<string> lstcategorias = new List<string>() { "Alfa", "Bravo", "Charlie" };

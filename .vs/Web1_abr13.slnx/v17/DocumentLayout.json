@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Kiko\\Desktop\\Material Escola\\TI3\\Web1_abr13\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|c:\\users\\kiko\\desktop\\material escola\\ti3\\web1_abr13\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|c:\\users\\kiko\\desktop\\material escola\\ti3\\web1_abr13\\views\\clientes\\editcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19D224CD-9FB0-404B-94F3-8377ABB91C7E}|Web1_abr13.csproj|solutionrelative:views\\clientes\\editcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\Kiko\\Desktop\\Material Escola\\TI3\\Web1_abr13\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\Kiko\\Desktop\\Material Escola\\TI3\\Web1_abr13\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "Controllers\\ClientesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T11:37:59.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditCliente.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kiko\\Desktop\\Material Escola\\TI3\\Web1_abr13\\Views\\Clientes\\EditCliente.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\EditCliente.cshtml",
+              "ToolTip": "C:\\Users\\Kiko\\Desktop\\Material Escola\\TI3\\Web1_abr13\\Views\\Clientes\\EditCliente.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\EditCliente.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-01T11:38:15.317Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
